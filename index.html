@@ -1,0 +1,1353 @@
+<!doctype html>
+<html>
+    <head>
+        <title>groupleads</title>
+        <meta charset="utf-8">	
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+        <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="assets/css/toastr.min.css">
+        <link href="assets/lib/css/simplebar.min.css" rel="stylesheet" />
+        <link href="assets/css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+    	<div class="loader_wrap">
+    		<div class="loader"></div>		
+    	</div>
+	<!------------header section starts here----------------->
+	<header>
+			<div class="row pt-3 pb-3">
+				<div class="col-12 p-0">
+					<div class="row pl-2">
+						<div class="col-6 p-0">
+						   <img src="assets/images/logo_bg.png" >
+						</div>
+						<div class="col-6 text-right">
+						   <ul class="m-0 p-0">
+							  <li class="profile_link">
+								 <a href="javascript:void(0)"><h5 class="first_letter_name">G</h5></a>
+							  </li>
+							  <li class="mt-2 pl-2 open-sidebar" >
+								 <a href="#" ><img src="assets/images/list.png" ></a>
+							  </li>
+							  <li class="mt-2 pl-2 close-sidebar" style="display:none">
+								 <a href="#" ><img src="assets/images/close_icon.png" ></a>
+							  </li>
+						   </ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!------------header section ends here----------------->
+	<!----------------sharing friends starts here--------------->
+	<div class="tab" id="sharing_friends">		
+		 <section class="pl-2 pr-2 pt-4 mt-4 ">
+		    <div class="container pl-2 pr-2 pt-4 mt-4">
+			   <div class="col-12 text-center pt-4 mt-4">
+				   <img src="assets/images/Thank you.png" class="mt-4 mb-3" />
+				   <h3>Thanks for sharing Group Leads with your friends</h3>
+				</div>  
+				<div class="row mt-4 pt-4">
+					<div class="col-12 mt-1 pt-3">
+						<button type="button" class="btn btn-primary mb-2 mt-2 btn-block back back_to_home">Back to home</button>
+					</div>
+				</div>
+			</div>
+		</section> 
+	</div>
+	<!---------------------sharing friends screen ends here ------------------>
+    
+	<!----------------sharing email starts here--------------->
+	<div class="tab" id="sharing_email">		
+		 <section class=" pt-4 section_tab">
+			   <div class="row share-by-email pt-4 pb-3">
+			      <div class="col-6 p-0 pl-4"> <img src="assets/images/arrows.png" class="left_arrow_icon back-btn"> <h3 class="page_title_h4">Share by email</h3></div>
+			      <div class="col-6">
+				      <ul class="breadcrumb">
+						  <li class="breadcrumb-item"><a href="#"><img src="assets/images/icon.png" /></a></li>
+						  <li class="breadcrumb-item"><a class="share_a" href="#">Share</a></li>
+                      </ul> 
+				  </div>
+			   </div>
+              <div class="container pt-1">	
+              	<form name="viral_form" id="viral_form">		   
+			   	<div class="col-12 pt-2 mt-2">
+				  
+				  	<input type="hidden" name="userId" class="userId" />
+					<div class="form-group">
+						<label for="Tag Name" class="email_label">Contact Email(s)</label>
+						<input type="text" class="form-control  email_placeholder" placeholder="Enter emails seperated by commas" name="emails">
+						<h6 class="mt-2 email_h6">e.g(johndoe291@gmail.com,mary201@live.com)</h6>
+					</div>
+					<div class="form-group mt-4">
+					  <label for="comment" class="email_address_label">Email Address</label> 
+					  <textarea class="form-control share_textarea_message" name="sharemessagetext" rows="5" id="comment" placeholder="I'm using Group Leads chrome extension to convert my new facebook group members into leads in google sheet and email marketing autoresponder. Check it out: https://groupleads.net/"></textarea>
+					</div> 
+				</div>  
+				<div class="row mt-4 pt-3">
+					<div class="col-12">
+						<button type="submit" class="btn btn-primary mb-2 mt-2 btn-block share_btn share_button_label">Share</button>
+					</div>
+				</div>
+				</form>
+			</div>
+		</section> 
+	</div>
+	<!---------------------sharing email ends here------------------>
+	
+	<!----------------help screen starts here--------------->
+	<div class="tab" id="help">		
+		 <section class=" pt-4 section_tab">
+			   <div class="row share-by-email pt-4 pb-3">
+			      <div class="col-6 p-0 pl-4"><img src="assets/images/arrows.png" class="left_arrow_icon back-btn"><h3 class="help_title">Help</h3></div>
+			      <div class="col-6">
+				      <ul class="breadcrumb">
+						 <li class="breadcrumb-item"><a href="#"><img src="assets/images/icon.png" /></a></li>
+						 <li class="breadcrumb-item"><a href="#" class="help_title">help</a></li>
+                      </ul> 
+				  </div>
+			   </div>
+              <div class="container pl-4 pr-2 pt-1 help_sec">			   
+			   <div class="col-12 pt-2 mt-2 p-0 ">
+			       <div class="row">
+				      <div class="col-9 p-0">
+				         <p class="help_p">Want to get the most out of Group Leads Chrome extension?</p>
+					  </div>
+				   </div>
+				</div> 
+                 <div class="col-12 pt-2 mt-2 ">
+			       <div class="row mb-4 pb-4">
+				      <div class="col-10 p-0">
+				         <h6 class="step_by_step_tutorials_text">Go through our step-by-step tutorials and videos.</h6>
+					  </div>
+					  <div class="col-2 p-0 text-right share_img">
+				         <a href="https://docs.groupleads.net/" id="step_by_step_help" target="_blank"><img src="assets/images/share.png" /></a>
+					  </div>
+				   </div>
+				    <div class="row mb-4 pb-4">
+				      <div class="col-10 p-0">
+				         <h6 class="schedule_zoom_call_text">Schedule a zoom call with our support team.</h6>
+					  </div>
+					  <div class="col-2 p-0 text-right share_img">
+				         <a href="https://docs.groupleads.net/article/74-request-zoom-setup-call" id="schedule_call_help" target="_blank"><img src="assets/images/share.png" /></a>
+					  </div>
+				   </div>
+				    <div class="row mb-3 pb-3">
+				      <div class="col-10 p-0">
+				         <h6 class="become_affiliate_text">How to become an affiliate and earn 30% commissions</h6>
+					  </div>
+					  <div class="col-2 p-0 text-right share_img">
+				         <a href="https://docs.groupleads.net/article/27-how-do-i-become-an-affiliate-of-group-leads" id="become_affiliate_help" target="_blank"><img src="assets/images/share.png" /></a>
+					  </div>
+				   </div>
+				   <div class="row mb-3 pb-3">
+				      <div class="col-10 p-0">
+				         <h6 class="become_GL_reseller_text">How to become Group Leads reseller</h6>
+					  </div>
+					  <div class="col-2 p-0 text-right share_img">
+				         <a href="https://docs.groupleads.net/category/147-resellers" id="become_reseller_help" target="_blank"><img src="assets/images/share.png" /></a>
+					  </div>
+				   </div>
+				</div> 				
+			</div>
+		</section>
+        <footer id="footer-top">
+		    <div class="col-12 text-center mt-1 pt-4 pb-1">
+			   <p id="note_affiliate_p">Group leads is not affiliated with Facebook in any way</p>
+			</div>
+		</footer>		
+	</div>
+	<!---------------------help screen ends here------------------>
+	
+	<!----------------settings screen starts here--------------->
+	<div class="tab" id="settings">		
+		 <section class=" pt-4 section_tab" id="all_global_group_settings">
+			   <div class="row share-by-email pt-4 pb-3">
+
+			      <div class="col-6 p-0 pl-4">
+
+			      	<img src="assets/images/arrows.png" class="left_arrow_icon back-btn"><h3 class="setting_title">Settings</h3></div>
+			     
+
+
+			      <div class="col-6">
+				      <ul class="breadcrumb">
+						  <li class="breadcrumb-item"><a href="#"><img src="assets/images/icon.png" /></a></li>
+						  <li class="breadcrumb-item"><a href="#" class="setting_title">settings</a></li>
+                      </ul> 
+				  </div>
+			   </div>
+              <div class="container pl-4 pr-4 pt-1">			   
+			   <div class="col-12 pt-2 mt-2 p-0">
+				  <div class="row settings_row">
+				     <div class="col-9 p-0">
+					    <h5 class="global_autoresponder_label">Disable auto responder globally</h5>
+					 </div>
+				     <div class="col-3 p-0 text-right">
+						 <label class="switch"><input type="checkbox" id="global-autoresponder-status" checked ><span class="slider round"></span></label>
+					 </div>
+				  </div>
+				   <div class="row settings_row mt-2">
+				     <div class="col-9 p-0">
+					    <h5 class="global_googlesheet_enable_label">Allow the same google sheets for all groups</h5>
+					 </div>
+				     <div class="col-3 p-0 text-right">
+						 <label class="switch"><input type="checkbox" id="global-googlesheet-enable" checked><span class="slider round"></span></label>
+					 </div>
+				  </div>
+				   <div class="row settings_row mt-2">
+				     <div class="col-8 p-0 language">
+					    <h5 class="global-language-label">Language settings</h5>
+					 </div>
+				     <div class="col-4 p-0 text-right">
+						<div class="groupleads_select mt-3">
+							  <select class="form-control" id="languagesSelect">
+                                    <!-- <option value="en" selected>English</option>
+                                    <option value="ch">Chinese</option> -->
+                              </select>
+						   </div>
+					 </div>
+				  </div>
+				  <div class="row settings_row mt-2">
+				     <div class="col-8 p-0 mt-4 customerApproveSet">
+					    <h5 class="customer-approve-first-setting">Customer Approve First</h5>
+					 </div>
+				     <div class="col-4 p-0 text-right">
+						<div class="groupleads_select mt-3">
+							  <select class="form-control" name="customer_approve_first" id="customerApproveFirst">
+                                    <option value="25">25</option>
+                                    <option value="35">35</option>
+                                    <option value="50">50</option>
+                              </select>
+						   </div>
+					 </div>
+				  </div>
+				</div>  
+				<!-- <div class="row mt-3 pt-3">
+					<div class="col-12">
+						<button type="submit" class="btn btn-primary mb-2 mt-2 btn-block">Update</button>
+					</div>
+				</div> -->
+			</div>
+		</section> 
+	</div>
+	<!---------------------settings screen ends here------------------>
+	
+	<!--------------profile page start here----------->
+	<div class="tab" id="Profile" >
+	    <section class=" pt-4 section_tab">
+		      <div class="row share-by-email pt-4 pb-3">
+			      <div class="col-6 p-0 pl-4"><img src="assets/images/arrows.png" class="left_arrow_icon back-btn"><h3 class="page_title_h4">Profile</h3></div>
+			      <div class="col-6">
+				      <ul class="breadcrumb">
+						  <li class="breadcrumb-item"><a href="#"><img src="assets/images/icon.png" /></a></li>
+						  <li class="breadcrumb-item"><a href="#" class="page_title_h4">Profile</a></li>
+                      </ul> 
+				  </div>
+			   </div>
+			   <div class="container pl-4 pr-4 pt-1">	
+					<div class="row profile_upload">
+					   <div class="col-4"></div>
+					   <div class="col-4 p-0 text-center mt-3">
+					      <h5><img src="assets/images/profile.png" ></h5>
+						  <h4 class="profile_name"></h4>
+						  <h6><a href="javascript:void(0)" class="profile_email"></a></h6>
+					   </div>
+					</div>
+					<form class="mt-2" name="profile_form" id="profile_form">
+						<div class="form-group">
+							<label class="full_name_label" for="full Name">Full Name</label>
+							<input type="text" class="form-control" id="name" placeholder="Enter your full name" name="name">
+						</div>
+						<div class="form-group">
+							<label class="email_label" for="Email Address">Email Address</label>
+							<input type="text" class="form-control" id="email" placeholder="Enter your email address" name="email" readonly>
+						</div>
+						<button type="submit" class="btn btn-primary btn-block update mt-4 button_label">Update</button>
+					</form>
+					<div class="row info mt-3">
+					   <h2 class="h2_1">Billing Information</h2>
+					</div>
+					 <div class="row plans">
+						<div class="col-12 p-0">
+						<h4 class="h2_2">Current plan</h4>
+						</div>
+						<div class="container p-0">
+						  <div class="row">
+						     <div class="col-6 group_plans p-0 mt-1">
+								  <h3 class="plan_name"></h3>
+								  <h3 ><span class=" allowed_text" >Max Groups allowed: </span><span class="groups_allowed"></span></h3>
+							  </div>
+							  <div class="col-6 p-0 mt-1 price">
+							    <h5>$<span class="plan-price">27000</span></h5>
+							  </div>
+						  </div>
+						 </div>
+						  <div class="upgrade_btn_wrap" style="display:none;">
+						  	<p class="mt-1 p_text">Click the upgrade button below to never have to pay monthly fees & be able to add unlimited Facebook groups.</p>
+						  	<a href="#" target="_blank" class="btn btn-primary btn-block update mb-4 upgrade_button_label">Upgrade</a>
+						  </div>
+						</div>
+					</div>
+		</section>
+	</div>
+	<!---------------- profile page end here --------------->
+	
+	<!----------------groups screen starts here--------------->
+	<div class="tab" id="groups-yes" style="display:block">
+		<section class=" pt-4 section_tab pl-4 pr-4 section_group pb-1 ">
+			   <div class="row add-group-event-container pt-4 pb-4 add-group-section">
+			      <div class="col-7 p-0"><h3  class="no_groups_heading-0"><span class="no-group-text-1">You have </span>  <span class="on-screen-group-name ">Group Name</span> <span class="no-group-text-2"> as the on-screen Facebook group now. Would you like to add it to your groups? </span> </h3></div>
+			      <div class="col-5 add-group-btn add-group-btn-with-groups ">
+				      <img src="assets/images/cross_icon.png" class="dismiss-add-group-icon"/>
+				      <button type="btn" class="btn btn-primary mb-2 mt-2 btn-block  add_to_gps_btn final-add-group-btn">Add to groups</button>
+				  </div>
+			   </div>
+
+			   	<div class="row upgrade-button-section">
+
+					<div class="col-12">
+						You've reached your plan limit.<br/>Please, <a class="upgrade-link" target="_blank" href="">upgrade</a> to add more FB groups
+					</div>
+				
+				</div>
+
+			   <div class="input-group mb-1 mt-4 pb-2">
+					<div class="input-group-prepend">
+					  <span class="input-group-text"><i class="fa fa-search"></i></span>
+					</div>
+					<input type="text" class="form-control search_groups_field" placeholder="Search groups">
+               </div>
+		</section>
+		<div class="row">
+			<div class="col-12 groups_sec pt-3 pl-4 pr-4">
+				<div class="row">
+					<div class="col-8 p-0">
+						<h4 class="group_label">Groups</h4>
+					</div>
+					<div class="col-4 p-0 text-right add-group add-group-btn-with-groups final-add-group-btn yes-group-redirecting-btn" >
+						  <div class="input-group mb-3">
+							<div class="input-group-prepend">
+							  <span class="input-group-text"><img src="assets/images/add.png" ></span>
+							</div>
+							<button type="button" class="form-control add_group_button" ><span>Add Group</span></button>
+                          </div>        
+					</div>
+				</div>
+			</div>
+			<div class="col-12 groups_sec group-list pl-4 pr-4" data-simplebar>		    
+				
+			</div>
+
+			<div class="col-12">
+					<button type="button" class="btn btn-primary btn-block update group-pagination">LOAD MORE...</button>
+			</div>
+		</div>
+		<div class="row pb-3 mt-3 pt-3 footer_links">
+			<div class="col-12 active_links link_icons">
+				<ul class="nav justify-content-center">
+					<li class="nav-item affiliate">
+					  <a class="nav-link forgot_licence affiliate_url_label" href="https://groupleads.net/affiliates/">Become an Affiliate</a>
+					</li>
+					<li class="nav-item get_support" >
+						  <a class="nav-link support get_support_label" href="https://docs.groupleads.net/">Get support</a>
+				   </li>
+				</ul>
+			</div>
+		 </div>
+	</div>
+	<!---------------------groups screen ends here------------------>
+
+	<!----------------no groups screen starts here--------------->
+	<div class="tab" id="no-groups-but-focus-group" style="display:none">
+		 	<section class=" pt-4 section_tab pl-4 pr-4 section_group pb-1 ">
+			   <div class="row add-group-event-container pt-4 pb-4 add-group-section">
+			      <div class="col-7 p-0"><h3  class="no_groups_heading-0"><span class="no-group-text-1">You have </span>  <span class="on-screen-group-name ">Group Name</span> <span class="no-group-text-2"> as the on-screen Facebook group now. Would you like to add it to your groups? </span> </h3></div>
+			      <div class="col-5 add-group-btn add-group-btn-with-groups ">
+				      <img src="assets/images/cross_icon.png" class="dismiss-add-group-icon"/>
+				      <button type="btn" class="btn btn-primary mb-2 mt-2 btn-block  add_to_gps_btn final-add-group-btn">Add to groups</button>
+				  </div>
+			   </div>
+
+		</section>
+		<div class="col-12 groups_sec pt-3 pl-4 pr-4">
+		    <div class="row">
+				<div class="col-8 p-0">
+					<h4 class="group_label">Groups</h4>
+				</div>
+				<div class="col-4 p-0 text-right add-group final-add-group-btn " >
+						  <div class="input-group mb-3">
+							<div class="input-group-prepend">
+							  <span class="input-group-text"><img src="assets/images/add.png" ></span>
+							</div>
+							<button type="button" class="form-control add_group_button"><span>Add Group</span></button>
+                           </div>
+					</div>
+			</div>
+			<div class="col-12 text-center pt-4 mt-2">
+			   <p class="no_group_p">You have no groups linked yet, start by linking a facebook group here</p>
+			   <img src="assets/images/arrows.png" class="arrow"/>
+			</div>
+			<div class="col-12 text-center pt-4 mt-4">
+			   <p class="font-weight-bold text">OR</p>
+			  
+			</div>
+			<div class="row group-item pt-3 pb-3 mt-3">
+			    <div class="col-12 text-center">
+				   <h6 class="view_tutorials_button">View tutorial videos</h6>
+				</div>
+			</div>
+			<div class="row group-item pt-3 pb-3 mt-2">
+			    <div class="col-12 text-center">
+				   <h6 class="request_call_via_zoom_button">Request a 5-15 mins setup call via zoom</h6>
+				</div>
+			</div>
+		</div>
+		<div class="row pb-3 mt-3 pt-3 footer_links"> 
+				<div class="col-12 active_links link_icons">
+					<ul class="nav justify-content-center">
+						<li class="nav-item affiliate">
+					  <a class="nav-link forgot_licence affiliate_url_label" href="https://groupleads.net/affiliates/">Become an Affiliate</a>
+					</li>
+						<li class="nav-item get_support" >
+						  <a class="nav-link support get_support_label" href="https://docs.groupleads.net/">Get support</a>
+						</li>
+					</ul>
+				</div>
+		</div>
+	</div>
+	<!---------------------no groups screen ends here------------------>
+
+
+	 
+	 <!----------------no groups screen starts here--------------->
+	<div class="tab" id="no-groups" style="display:none">
+
+
+		 <section class=" pt-4 section_tab pl-4 pr-4 section_group pb-1">
+
+		 	  <div class="row add-group-event-container pt-4 pb-4 add-group-section">
+			      <div class="col-7 p-0"><h3 class="no_group_warning">To have a group on focus, open your prefered group to add and then click on the extension again.</h3></div>
+			      <div class="col-5">
+				      <img src="assets/images/cross_icon.png" class="dismiss-add-group-icon close-warning-img"/>
+				  </div>
+			   </div>
+		</section> 
+		<div class="col-12 groups_sec pt-3 pl-4 pr-4">
+		    <div class="row">
+				<div class="col-8 p-0">
+					<h4 class="group_label">Groups</h4>
+				</div>
+				<div class="col-4 p-0 text-right add-group open-facebook-groups add-opacity-on-add-btn" >
+						  <div class="input-group mb-3">
+							<div class="input-group-prepend">
+							  <span class="input-group-text"><img src="assets/images/add.png" ></span>
+							</div>
+							<button type="button" class="form-control add_group_button" disabled><span>Add Group</span></button>
+                           </div>
+					</div>
+			</div>
+			<div class="col-12 text-center pt-4 mt-2 hide-when-groups">
+			   <p class="no_group_p">You have no groups linked yet, start by linking a facebook group here</p>
+			   <img src="assets/images/arrows.png" class="arrow"/>
+			</div>
+			<div class="col-12 text-center pt-4 mt-4">
+			   <p class="font-weight-bold text">OR</p>
+			  
+			</div>
+			<div class="row group-item pt-3 pb-3 mt-3">
+			    <div class="col-12 text-center">
+				   <h6 class="view_tutorials_button">View tutorial videos</h6>
+				</div>
+			</div>
+			<div class="row group-item pt-3 pb-3 mt-2">
+			    <div class="col-12 text-center">
+				   <h6 class="request_call_via_zoom_button">Request a 5-15 mins setup call via zoom</h6>
+				</div>
+			</div>
+		</div>
+		<div class="row pb-3 mt-3 pt-3 footer_links"> 
+				<div class="col-12 active_links link_icons">
+					<ul class="nav justify-content-center">
+						<li class="nav-item affiliate">
+					  <a class="nav-link forgot_licence affiliate_url_label" href="https://groupleads.net/affiliates/">Become an Affiliate</a>
+					</li>
+						<li class="nav-item get_support" >
+						  <a class="nav-link support get_support_label" href="https://docs.groupleads.net/">Get support</a>
+						</li>
+					</ul>
+				</div>
+		</div>
+	</div>
+	<!---------------------no groups screen ends here------------------>
+	
+	<!----------------groupleads screen starts here --------------->
+	<div class="tab" id="groupleads-tabs">
+		<section class=" pt-4 section_tab">
+			 <div class="row share-by-email pt-4 pb-2 pl-4">
+			      <div class="col-7 p-0">
+				          <img src="assets/images/arrows.png" class="left_arrow_icon"><h3 id="groupNameHeader"> </h3>
+					 </div>
+			      <div class="col-5">
+				      <ul class="breadcrumb">
+						  <li class="breadcrumb-item"><a href="#"><img src="assets/images/icon.png" /></a></li>
+						  <li class="breadcrumb-item"><a class="groupNameHeader" href="#">groupleads</a></li>
+                      </ul> 
+				  </div>
+			   </div>
+
+              <div class="container pt-3 pb-4 group_tabs" id="setting_per_group">			   
+				  <ul class="nav nav-tabs">
+					<li class="nav-item">
+					  <a class="nav-link active google_sheet_setup" data-toggle="tab" href="#setup">Setup</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link autoresponder_tab header_h6" data-toggle="tab" href="#autoresponder">Autoresponder</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link auto_approve_settings_tab header_a"  data-toggle="tab" href="#autoapprove">Auto approve & decline</a>
+					</li>
+				  </ul>
+
+				  <!-- Tab panes -->
+				  <div class="tab-content">
+					<div id="setup" class="container tab-pane active"><br>
+					  <h3 class=""><span class="make_copy_google_sheet_1">Make a copy of this </span> <a href="https://goo.gl/WtfCBC" class="open-sample-sheet-link" target="_blank">Google Sheet & Format</a></h3>
+					  <form id="linked-group-setting-form" action="" class="mt-4">
+							<div class="form-group">
+								<label for="Tag Name" class="google_sheet_url_label">Google sheet URL</label>
+								<input type="hidden" id="group_set_id" name="group-set-id">
+								<input type="text" class="form-control" id="google_sheet_url" placeholder="Enter Your Google Sheet URL" name="google_sheet_url">
+								<h4 id="verify_sheet_url" class="verify_sheet">Verify</h4>
+								<h4 id="verified_sheet_url" style="display:none;">Verified</h4>
+							</div>
+							
+							<h5 ><span class="google_sheet_copy_1">To create Google Sheet URL, Click on the Google Sheet & Format link above, go to the File menu then select Make a copy.</h5>
+							<button type="submit" class="btn btn-primary btn-block update mt-3 update_btn save-google-sheet-url per-group-update">Update</button>
+						</form>
+						<div class="row mb-1 pb-4 mt-3 pt-2">
+							  <div class="col-10">
+								 <h6 class="view_google_sheet">View Google Sheet data</h6>
+							  </div>
+							  <div class="col-2 text-right share_img">
+								 <a href="#" target="_blank" class="view_data_link"><img src="assets/images/share.png" /></a>
+							  </div>
+				        </div>
+					</div>
+					<div id="autoresponder" class="container tab-pane fade">
+						<input id="actual-group-id" type="hidden">
+					 <div class="row autoresponder_enable pt-2 mt-2">
+						<div class="col-6 enable_autoresponder_per_group">Enable autoresponder</div>
+						<div class="col-6 text-right enable_toggle p-0 mt-1">
+							<label class="switch">
+							  <input type="checkbox" id="autoresponder_status">
+							  <span class="slider round"></span>
+							</label>
+						</div>
+					  </div>
+					  <div class="row">
+						<div class="col-9 p-0">
+						  <div class="groupleads_select mt-3">
+							  <select class="form-control" id="autoresponderDropDown" name="autoresponderDropDown">
+							  </select>
+						   </div>
+						</div>		
+
+						<div class="col-3 p-0 credentials-parent">
+						  <div>
+								<a class="credentials-form-link credentials_form_link_a" href="javascript:void(0);">Credentials</a>
+						   </div>
+						</div>	
+					</div>
+					<div class="row autoresponder_settings mt-4">
+						
+						<div class="col-9">
+							<h5 data-toggle="modal" data-target="#welcome_message"><a href="#" class="enable_welcome_message welcome_message_popup">Enable welcome messaging</a></h5>
+						 </div>
+						 <div class="col-3 p-0 text-right">
+							 <label class="switch"><input type="checkbox" id="welcome_message_status"><span class="slider round welcome_message_popup"></span></label>
+						 </div>
+					</div>
+					  <div class="row autoresponder_settings mt-1">
+						<div class="col-9">
+							<h5 data-toggle="modal" data-target="#decline_message"><a href="#" class="enable_decline_message">Enable decline messaging</a></h5>
+						 </div>
+						 <div class="col-3 p-0 text-right">
+							 <label class="switch"><input type="checkbox" id="decline_message_status"><span class="slider round"></span></label>
+						 </div>
+					</div>
+					<div class="row autoresponder_settings mt-1">
+						<div class="col-9">
+							<h5 data-toggle="modal" data-target="#tag_members"><a href="#" class="disable_tagging_per_group">Tag new members in welcome post</a></h5>
+						 </div>
+						 <div class="col-3 p-0 text-right">
+							 <label class="switch"><input type="checkbox" id="tag_status"><span class="slider round"></span></label>
+						 </div>
+					   </div>
+					<div class="row autoresponder_settings mt-1">
+						<div class="col-9">
+							<h5 data-toggle="modal" data-target="#send_message_modal"><a href="#" class="message_only_per_group">Send message only settings</a></h5>
+						</div>
+						<div class="col-3 p-0 text-right">
+							<label class="switch"><input type="checkbox" id="message_only_status"><span class="slider round"></span></label>
+						</div>
+					 </div>
+					 <div class="show_tags_div row autoresponder_settings mt-1">
+						<div class="col-9">
+							<h5 data-toggle="modal" data-target="#chatsilo_modal"><a href="#" class="apply_chatsilo_tag_new_members">Apply <span>Chatsilo</span> tag to new members</a></h5>
+						 </div>
+						 <div class="col-3 p-0 text-right">
+							<label class="switch"><input type="checkbox" id="chatsilo_tag_status"><span class="slider round"></span></label> 
+						 </div>
+					 </div>
+					 <div class="row autoresponder_settings mt-1">
+						<div class="col-9">
+							<h5 data-toggle="modal" data-target="#keywords"><a href="#" class="auto_decline">Auto decline based on keywords</a></h5>
+						 </div>
+						<div class="col-3 p-0 text-right">
+							<label class="switch"><input type="checkbox" id="auto_decline_message_status" name="auto_decline_message_status"><span class="slider round"></span></label>
+						</div>
+					 </div>
+					 <button type="button" class="btn btn-primary btn-block update mt-3 set-autoresponder update_btn" >Update</button>
+					</div>
+					<div id="autoapprove" class="container tab-pane fade"><br>
+					   <form name="auto_approve_form" id="auto_approve_form">
+					   	<input type="hidden" name="userId" class="userId">
+	                    <input type="hidden" id="linkGroupId"  name="linkGroupId">
+	                    <input type="hidden" id="isNew" name="isNew" value="0">
+
+	                    <div class="col-12 auto-decline-warning p-0">
+							New members that don't meet the criteria will be automatically declined.
+						</div>
+					   <div class="row autoresponder_settings mt-2">
+							<div class="col-9 p-0">
+								<h5><a href="#" class="enable_automatic_approval">Enable automatic approval</a></h5>
+							</div>
+							<div class="col-3 text-right">
+								<label class="switch"><input type="checkbox" name="auto_approve_status" id="auto_approve_status"><span class="slider round"></span></label>
+							</div>
+					    </div>
+						<div class="row settings_row mt-2">
+							<div class="col-9 p-0 language">
+								<h5 class="auto_approve_members">Auto approve members every (minutes):</h5>
+							</div>
+							<div class="col-3 p-0 text-right select_time">
+								<div class="groupleads_select mt-3">
+									<input class="form-control" id="interval" type="Number" pattern="[0-9]{3}"  value="5" name="interval" min="1">
+								   </div>
+							</div>
+							<label id="interval-error" style="display:none;" class="text-danger" for="interval">Please enter a value greater than or equal to 5.</label>
+				        </div>
+						<div class="col-12 p-0 mt-4 mb-3">
+						   <h3 class="auto_approve_new_members_heading">Auto approve new members if:</h3>
+						</div>
+						 <div class="row autoresponder_settings mt-2">
+							<div class="col-9 p-0">
+								<h5><a href="#" class="answer_questions">All three questions are answered</a></h5>
+							 </div>
+							 <div class="col-3 text-right">
+								 <label class="switch"><input type="checkbox" name="all_answered" id="all_answered" checked><span class="slider round"></span></label>
+							 </div>
+					    </div>
+						 <div class="row autoresponder_settings mt-2">
+							<div class="col-9 p-0">
+								<h5><a href="#" class="email_in_question">Email is dropped in one of the questions</a></h5>
+							 </div>
+							 <div class="col-3 text-right">
+								 <label class="switch"><input type="checkbox" name="is_email" id="is_email" checked=""><span class="slider round"></span></label>
+							 </div>
+					    </div>
+						 <div class="row autoresponder_settings mt-2">
+							<div class="col-9 p-0">
+								<h5><a href="#" class="new_member_agree_to_group_rules">New member agree to group rule(s)?</a></h5>
+							 </div>
+							 <div class="col-3 text-right">
+								 <label class="switch"><input type="checkbox" name="rule_filter" id="rule_filter"><span class="slider round"></span></label>
+							 </div>
+					    </div>
+						 <div class="row settings_row mt-2">
+							 <div class="col-6 p-0 language">
+								<h5 class="gender_select">Gender</h5>
+							 </div>
+							 <div class="col-6 p-0 text-right">
+								<div class="groupleads_select mt-3">
+									  	<select class="form-control" id="gender_filter" name="gender_filter">
+											<option value="0" selected>
+		                                     --
+		                                  	</option selected>
+		                                  	<option value="2" >
+		                                     Women
+		                                  	</option>
+		                                  	<option value="1">
+		                                     Men
+		                                  	</option>
+									  	</select>
+								   </div>
+							 </div>
+				        </div>
+						<div class="row settings_row mt-2">
+							 <div class="col-6 p-0 language">
+								<h5 class="joined_facebook_at_least_select">Joined facebook at least</h5>
+							 </div>
+							 <div class="col-6 p-0 text-right">
+								<div class="groupleads_select mt-1">
+								  <select class="form-control" id="whenjoined" name="whenjoined">
+									<option value="all" selected>
+                                     --
+									</option selected>
+									<option value="1" >
+									  Before 1 month
+									</option>
+									<option value="3">
+									  Before 3 months
+									</option>
+									<option value="6">
+									  Before 6 months
+									</option>
+									<option value="12">
+									  Before 1 year
+									</option>
+									<option value="24">
+									  Before 2 years
+									</option>
+									<option value="36">
+									  Before 3 years
+									</option>
+								  </select>
+							   	</div>
+							 </div>
+				        </div>
+						<div class="row settings_row mt-2">
+							 <div class="col-6 p-0 language">
+								<h5 class="location">Located or lives in</h5>
+							 </div>
+							 <div class="col-6 p-0 text-right mt-1">
+								 <div class="form-group">
+								     <input type="text" class="form-control" placeholder="e.g New York" id="lives_in"  name="lives_in">
+								  </div>
+							 </div>
+				        </div>
+						<div class="row settings_row mt-2">
+							 <div class="col-6 pl-0 language">
+								<h5 class="has_num_mutual_friends">Has number of mutual friends with me</h5>
+							 </div>
+							 <div class="col-6 p-0 text-right">
+								 <div class="form-group">
+                                     <input class="form-control" placeholder="3" id="mutual_friends_with_me"  type="Number" value="0" min="0" name="mutual_friends">
+
+                                  </div>
+							 </div>
+				        </div>
+						<div class="row settings_row mt-2">
+							 <div class="col-6 pl-0 language">
+								<h5 class="has_num_friends_group">Has number of friends in a group with me</h5>
+							 </div>
+							 <div class="col-6 p-0 text-right">
+								 <div class="form-group">
+                                     <input type="number" class="form-control" id="friends_in_group" value="0" min="0" name="friends_in_group">
+                                  </div>
+							 </div>
+				        </div>
+						<div class="row settings_row mt-2">
+							 <div class="col-6 pl-0 language">
+								<h5 class="has_num_common_groups">Has number of groups in common with me</h5>
+							 </div>
+							 <div class="col-6 p-0 text-right">
+								 <div class="form-group">
+                                     <input class="form-control" placeholder="3" id="common_groups" type="Number" value="0" min="0" name="common_groups">
+                                  </div>
+							 </div>
+				        </div>
+						<button type="submit" class="btn btn-primary btn-block update mt-3 mb-3 update_btn">Update</button> 
+						</form>
+					</div>
+				  </div>
+			 </div>
+		</section> 
+	</div>
+	<!---------------------groupleads screen ends here------------------>
+	
+	<!---------------------group leads support community automation report model starts here------------------>
+	
+	<div class="modal" id="automation_report_model" data-keyboard="false" data-backdrop="static" >
+	  <div class="modal-dialog">
+		<div class="modal-content modalbody">
+		  <div class="modal-header automation_report">
+			<h4 class="modal-title"><span class="records-group-name automation_report_heading">Group Leads support community</span> <span class="automation_report_heading">automation Report</span></h4>
+			 <button type="button" class="close" data-dismiss="modal"><img src="assets/images/cross_icon1.png" /></button>
+		  </div>
+		  <div class="modal-body automation">
+		      <h6 class="mt-4 ml-3 last_automation_time_label">Last automation time</h6>
+			  <div class="row automation_timer mt-2">
+				<div class="col-6 pr-1">
+				    <div class="form-group">
+			           <input type="text" class="form-control last-automation-time automation_input" placeholder="09:39:28 AM" readonly>
+		             </div>
+				</div>
+				<div class="col-6 pl-1">
+				   <div class="form-group">
+			           <input type="text" class="form-control last-automation-date automation_input" placeholder="08/02/2020" readonly>
+		             </div>
+				</div>
+			  </div>
+			  <h6 class="mt-2 ml-3 next_automation_time_label">Next automation time</h6>
+			  <div class="row automation_timer mt-2">
+				<div class="col-6 pr-1">
+				    <div class="form-group">
+			           <input type="text" class="form-control next-automation-time automation_input" placeholder="09:39:28 AM" readonly>
+		             </div>
+				</div>
+				<div class="col-6 pl-1">
+				   <div class="form-group">
+			           <input type="text" class="form-control next-automation-date automation_input" placeholder="08/02/2020" readonly>
+		             </div>
+				</div>
+			  </div>
+		  </div>
+		</div>
+	  </div>
+	</div> 
+	<!---------------------automation report model ends------------------>
+	
+	<!---------------sidebar starts here--------->
+   <div class="sidenav" style="display:none">
+		<ul>
+			<li class="nav-com" data-target="groups-yes"><a href="#"><img src="assets/images/groups-icon.png"><span  class="Groups_link">Groups</span></a></li>
+			
+			<li class="nav-com" data-target="settings"><a href="#"><img src="assets/images/settings-icon.png"><span  class="Settings_link">Settings</span></a></li>
+			<li class="nav-com" data-target="" id="plans"><a href="https://groupleads.net/pricing"><img src="assets/images/plans-icon.png"><span  class="Plans_link">Plans</span></a></li>
+			<li class="nav-com" data-target="sharing_email"><a href="#"><img src="assets/images/share-icon.jpg"><span  class="Share_link"> Share</span></a></li>
+			<li class="nav-com" data-target="" id="rating"><a href="https://chrome.google.com/webstore/detail/group-leads/fflgpaejocnobejfanekjilflogejjch/reviews"><img src="assets/images/rate-icon.png"><span  class="Rate_link">Rate</span></a></li>
+            <li class="nav-com" data-target="help" id="help"><a href="#"><img src="assets/images/help_icon1.png"><span  class="Help_link">Help</span></a></li>
+			<li class="nav-com" data-target="webapp" id="web"><a href="https://app.groupleads.net"><img src="assets/images/webapp.png"><span  class="web_link">Webapp</span></a></li>
+			
+
+			
+
+			<li  data-target="" class="logout-btn"><a href="#"><img src="assets/images/logout-icon.png"><span  class="Logout">Logout</span></a></li>
+		</ul>
+	  </div>	  
+   <!---------------sidebar starts here--------->
+  <div class="modal" id="constant_contact_setup_modal" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header automation_report">
+          <h4 id="autoresponder_title" class="modal-title">Autoresponder Name</h4>
+          <button type="button" class="close" data-dismiss="modal"><img src="assets/images/cross_icon1.png" /></button>
+        </div>
+        <div  class="modal-body">
+
+           <h3 class="ar-notice">Here is a short tutorial on how to integrate <span>Group Leads with Constant Contact</span></h3>
+
+		   <form id="credentials_form" name="credentials_form" class="mt-2">
+		   		<input type="hidden" name="userId" id="userId" class="userId" >
+			   	<input type="hidden" name="id" id="autoresponder_id" >
+	            <input type="hidden" name="type" id="autoresponder_type" >
+	            <input type="hidden"  id="group-id-credentails" name="group_set_id">
+	            <input type="hidden" name="new_autoresponder" id="new_autoresponder" >
+
+	             <div  class="row" >
+                  <div  class="form-group col-12 p-0">
+                    <button type="button" style="display: none;" class="cancel-edit mt-1"><i class="fa fa-close"> Cancel Edit</i></button>
+                  </div>
+                </div>
+           <div class="row ques_ans_status" style="display: none;">
+           	<div class="col-9 p-0 pl-3">
+				<label style="color:#343a40;">Send Questions/Answers to <span style="color:#343a40;" id="ar_name"> Active Campaign</span></label>
+			 </div>
+			 <div class="col-3 p-0 text-right">
+				 <label class="switch"><input type="checkbox" checked name="save_ans" id="save-ans"><span class="slider round"></span></label>
+			 </div>
+           </div>     
+         <div class="row">		  
+		  <div id="ar_field_one"  class="form-group col-12">
+			<label for="token" class="api_token_label">API token <span>*</span></label>
+			<input type="text" name="field_three_value" id="app_path" class="form-control api_token_placeholder" placeholder="Enter your API token">
+		  </div>
+		  <div id="ar_field_two" class="form-group col-12">
+			<label for="key" class="api_key">API key  <span>*</span></label>
+			<input type="text" name="field_two_value" id="key" class="form-control api_key_placeholder" placeholder="Enter your API key" >
+		  </div>
+	       <div id="ar_field_three" class="form-group col-12">
+			<label for="list" class="list_id">List ID  <span>*</span></label>
+			<input type="text" name="field_one_value" id="url" class="form-control list_id_placeholder" placeholder="Enter your API ID">
+		  </div>
+
+		   <div style="display: none;" id="active-campaign-group" >
+              <span>Select Tags</span>
+                <div class="form-group">
+                    <div class="input-group">
+                    <select style="width: 100%" id="active-cmpaign-tags" multiple  data-role="tagsinput">
+                       </select>
+                    <input style="width: 100%" type="text" autocomplete="off" id="searchActiveTag" name="searchActiveTag" placeholder="Search tags" class="form-control" />
+                    </div>
+                </div>
+                
+                <div class="mb-2" id="dispaytagresults">
+                    <ul></ul>
+                </div>
+           </div>
+
+           <div style="display: none;" id="keap-tag-group">
+              <span>Select Tags</span>
+                <div class="form-group">
+                    <div class="input-group">
+                    <select style="width: 100%" id="keap-tags" multiple  data-role="tagsinput">
+                       </select>
+                    <input style="width: 100%" type="text" autocomplete="off" id="searchKeapTag" name="searchKeapTag" placeholder="Search tags" class="form-control" />
+                    </div>
+                </div>
+                
+                <div class="mb-2" id="dispayKeaptagresults">
+                    <ul></ul>
+                </div>
+           </div>
+
+		  </div>
+		    <button type="submit" class="btn btn-primary btn-block update mt-3 verify_btn submit_label update_credential_btn">Verify & Update</button>
+		  </form>
+        </div>
+       </div>
+    </div>
+  </div>
+  <!------------------tag members modal start here--------------->
+  <div class="modal" id="tag_members" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog tag_members_modal">
+      <div class="modal-content">
+      <div class="modal-header automation_report">
+          <h4 class="modal-title tag_key_label">Tag New Members In Welcome Post</h4>
+           <button type="button" class="close" data-dismiss="modal"><img src="assets/images/cross_icon1.png" /></button>
+        </div>
+         <div class="modal-body">
+		   <form id="comment-taging-form">
+			  <div class="form-group">
+				<label for="url" class="tag_key_label_2">Post URL</label>
+				<input type="text"  class="form-control " placeholder="Enter your post URL" id="post-url" name="post_url">
+			  </div>
+			   <div style="display: none;" class="row autoresponder_settings mt-2">
+				 <div class="col-9 p-0 custom">
+					<h5><a href="#" class="tag_in_single_comment_label">Tag custom approve all in single comment</a></h5>
+				 </div>
+				 <div class="col-3 p-0 text-right">
+					 <label class="switch"><input type="checkbox" id="tag_in_single_comment" name="tag_in_single_comment" ><span class="slider round"></span></label>
+				 </div>
+				</div>
+
+				<div  class="row autoresponder_settings mt-2">
+				 <div class="col-9 p-0 custom">
+					<h5><a href="#" class="tag_with_text_label">Tag without the comment/text</a></h5>
+				 </div>
+				 <div class="col-3 p-0 text-right">
+					 <label class="switch"><input type="checkbox" id="tag_with_text_comment" name="tag_with_text_comment" ><span class="slider round"></span></label>
+				 </div>
+				</div>
+
+
+			    <div class="row autoresponder_settings mt-1">
+				 <div class="col-9 p-0">
+					<h5><a href="#" class="tag_random_message_per_group">Randomize Comments</a></h5>
+				 </div>
+				 <div class="col-3 p-0 text-right">
+					 <label class="switch"><input type="checkbox" class="custom-control-input" id="tag_random_status" name="tag_random_status"><span class="slider round"></span></label>
+				 </div>
+			  </div>
+
+			     <div class="tag-random-container">
+                     <div class="row tag-random-row">
+
+					<!--    <div class="form-group mt-2">
+						  <textarea class="form-control"  rows="5"  name="tag_message_one" id="tag_message_one" placeholder="Type in your comments here and press enter"></textarea>
+			             </div> -->
+
+			            <div class="container-fluid tag-random-row outer-message-can mb-2 p-0">
+						<div class="row input-row">
+							<div class="col-11 p-0 messages">
+								<textarea name="tag_message_one" id="tag_message_one" class="form-control" rows="10" placeholder="Type in your comments here and press enter"></textarea>
+							</div>
+							<div class="col-1 p-0 text-right ">
+								<i title="Back" class="fa fa-angle-left m-temp-save"></i>
+							</div>
+						</div>
+						<div class="row display-row">
+							<div class="col-10 p-0 messages">
+								<h5><a class="tag_message_one display-m-text" href="javascript:void(0);"></a></h5>
+							</div>
+							<div class="col-2 p-0 text-right list_message">
+								<div class="dropdown dropleft float-right">
+									<img src="assets/images/list-icon.png" class=" dropdown-toggle list-icon" data-toggle="dropdown">
+									<div class="dropdown-menu">
+									  <a class="dropdown-item edit-m-n" href="#">Edit</a>
+									</div>
+								 </div>
+							</div>
+						</div>
+					</div>
+
+			         </div>
+			     </div>
+			    <span class="add_random_btn for-tag"><i class="fa fa-plus add-random-tag-comment" aria-hidden="true" title="Add message"></i></span>
+
+		   <button type="submit" id="save-tag-form" class="btn btn-primary btn-block update mt-4 save_tag_form">Save</button>
+		  </form>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!------------------tag members modal end here--------------->
+   <!------------------decline message modal start here--------------->
+   <div class="modal" id="decline_message" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog tag_members_modal">
+      <div class="modal-content">
+      <div class="modal-header automation_report">
+          <h4 class="modal-title page_title_h5">Decline message</h4>
+          <button type="button" class="close" data-dismiss="modal"><img src="assets/images/cross_icon1.png" /></button>
+        </div>
+         <div class="modal-body">
+		   <form id="decline_message_form" name="decline_message_form" >
+			 <div class="row send_message_time">
+			    <div class="col-7 p-0 mt-1"><h5 class="decline_interval_text ">Send message every</h5></div>
+			    <div class="col-3"> <input  type="number" class="form-control custom-number-fields" min="0" value="0" name="decline_interval" id="decline_interval"></div>
+			    <div class="col-2 mt-2 p-0"><h6 class="decline_interval_text_sp">Minute(s)</h6></div>
+			 </div>
+			 <div class="row send_message_time mt-2">
+			    <div class="col-7 p-0 mt-1"><h5 class="decline_limit_text">Stop after I'hv sent</h5></div>
+			    <div class="col-3">  <input  type="number" class="form-control custom-number-fields" min="0" value="0" name="decline_limit" id="decline_limit"></div>
+			    <div class="col-2 mt-2 p-0"><h6 class="decline_limit_text_sp">Messages</h6></div>
+			 </div>
+			 <div class="row send_message_time mt-2">
+			    <div class="col-7 p-0 mt-1"><h5 class="decline_start_text">Pause and start again after:</h5></div>
+			    <div class="col-3"> <input  type="number" min="0" value="0" name="decline_start" class="form-control custom-number-fields" id="decline_start"></div>
+			    <div class="col-2 mt-2 p-0"><h6 class="decline_start_text_sp">Minute(s)</h6></div>
+			 </div>
+			 <div class="row autoresponder_settings mt-3">
+				<div class="col-8 p-0">
+					<h5><a href="#" class="decline_random_message_per_group">Randomize message</a></h5>
+				</div>
+				<div class="col-4 text-right">
+					 <label class="switch"><input type="checkbox" id="decline_random_status" name="decline_random_status"><span class="slider round"></span></label>
+				</div>
+			  </div>
+			   <div class="decline-random-container">
+                     <!--   <div class="row decline-random-row">
+						   <div class="form-group">
+							    <textarea class="form-control" rows="8" name="declinemessage" id="declinemessage" placeholder=""></textarea>
+			            	</div>
+			         </div> -->
+
+			        <div class="container-fluid decline-random-row outer-message-can mb-2 p-0">
+						<div class="row input-row">
+							<div class="col-11 p-0 messages">
+								<textarea name="declinemessage" id="declinemessage" class="form-control" rows="10" placeholder=""></textarea>
+							</div>
+							<div class="col-1 p-0 text-right ">
+							<i title="Back" class="fa fa-angle-left m-temp-save"></i>
+							</div>
+							<div class="col-12 p-0 autoresponder_settings">
+								<h6 ><img src="assets/images/icon-red.png"><span class="note_text"> You can use [first_name], [last_name], [group_name], [group_url]</span></h6>
+							</div>
+						</div>
+						<div class="row display-row">
+							<div class="col-10 p-0 messages">
+								<h5><a class="declinemessage display-m-text" href="javascript:void(0);"></a></h5>
+							</div>
+							<div class="col-2 p-0 text-right ">
+								<div class="dropdown dropleft float-right">
+									<img src="assets/images/list-icon.png" class=" dropdown-toggle list-icon" data-toggle="dropdown">
+									<div class="dropdown-menu">
+									  <a class="dropdown-item edit-m-n" href="#">Edit</a>
+									</div>
+								 </div>
+							</div>
+						</div>
+					</div>
+
+
+			    </div>
+
+
+
+             <!--    <div class="row autoresponder_settings">
+				  	<h6  ><img src="assets/images/icon-red.png"><span class="note_text"> You can use [first_name], [last_name], [group_name], [group_url]</span></h6>
+			    </div> -->
+
+			       <span class="add_random_btn"><i class="fa fa-plus add-random-message" aria-hidden="true" title="Add message"></i></span>
+  			  
+		   <button type="submit" class="btn btn-primary btn-block update mt-3 update_button_lable">Update</button>
+		  </form>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!------------------decline message end here--------------->
+   <!------------------welcome message modal start here--------------->
+   <div class="modal" id="welcome_message" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog tag_members_modal">
+      <div class="modal-content">
+      <div class="modal-header automation_report">
+          <h4 class="modal-title page_title_h5">Welcome message</h4>
+          <button type="button" class="close" data-dismiss="modal"><img src="assets/images/cross_icon1.png" /></button>
+        </div>
+         <div class="modal-body">
+		   <form id="welcome_message_form" name="welcome_message_form">
+			 <div class="row send_message_time">
+			    <div class="col-7 p-0 mt-1"><h5 class="welcome-interval-text">Send message every</h5></div>
+			    <div class="col-3">   <input  type="number" class="form-control custom-number-fields" min="0" value="0" name="welcome_interval" id="welcome_interval"></div>
+			    <div class="col-2 mt-2 p-0"><h6 class="welcome-interval-text-sp">Minute(s)</h6></div>
+			 </div>
+			 <div class="row send_message_time mt-2">
+			    <div class="col-7 p-0 mt-1"><h5 class="welcome-limit-text">Stop after I'hv sent</h5></div>
+			    <div class="col-3">    <input  type="number" class="form-control custom-number-fields" min="0" value="0" name="welcome_limit" id="welcome_limit"></div>
+			    <div class="col-2 mt-2 p-0"><h6 class="welcome-limit-text-sp">Messages</h6></div>
+			 </div>
+			 <div class="row send_message_time mt-2">
+			    <div class="col-7 p-0 mt-1"><h5 class="welcome-start-text">Pause and start again after:</h5></div>
+			    <div class="col-3"> <input  type="number" min="0" value="0" name="welcome_start" class="form-control custom-number-fields" id="welcome_start"></div>
+			    <div class="col-2 mt-2 p-0"><h6 class="welcome-start-text-sp">Minute(s)</h6></div>
+			 </div>
+			 <div class="row autoresponder_settings mt-3">
+				<div class="col-8 p-0">
+					<h5><a href="#" class="welcome_random_message_per_group">Randomize message</a></h5>
+				</div>
+				<div class="col-4 text-right">
+					 <label class="switch"><input id="welcome_random_status" name="welcome_random_status" type="checkbox"><span class="slider round"></span></label>
+				</div>
+			 </div>
+
+			 <div class="welcome-random-container">
+                    <div class="container-fluid welcome-random-row outer-message-can mb-2 p-0">
+						<div class="row input-row">
+							<div class="col-11 p-0 messages">
+								<textarea name="welcomemessageone" id="welcomemessageone" class="form-control" rows="10" placeholder=""></textarea>
+							</div>
+							<div class="col-1 p-0 text-right ">
+								<i title="Back" class="fa fa-angle-left m-temp-save"></i>
+							</div>
+
+							<div class="col-12 p-0 autoresponder_settings">
+								<h6 ><img src="assets/images/icon-red.png"><span class="note_text"> You can use [first_name], [last_name], [group_name], [group_url]</span></h6>
+							</div>
+
+						</div>
+						<div class="row display-row">
+							<div class="col-10 p-0 messages">
+								<h5><a class="welcomemessageone display-m-text" href="javascript:void(0);"></a></h5>
+							</div>
+							<div class="col-2 p-0 text-right ">
+								<div class="dropdown dropleft float-right">
+									<img src="assets/images/list-icon.png" class=" dropdown-toggle list-icon" data-toggle="dropdown">
+									<div class="dropdown-menu">
+									  <a class="dropdown-item edit-m-n" href="#">Edit</a>
+									</div>
+								 </div>
+							</div>
+						</div>
+					</div>
+         	</div>
+
+         	  <span class="add_random_btn"><i class="fa fa-plus add-random-message-welcome" aria-hidden="true" title="Add message"></i></span>
+
+
+           <!--   <div class="row autoresponder_settings">
+				  	<h6 ><img src="assets/images/icon-red.png"><span class="note_text"> You can use [first_name], [last_name], [group_name], [group_url]</span></h6>
+			 </div> -->
+   	  
+		   <button type="submit" class="btn btn-primary btn-block update mt-3 welcome_update_button">Update</button>
+		  </form>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!------------------welcome message end here--------------->
+   <!------------------keywords modal start here--------------->
+  <div class="modal" id="keywords" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog tag_members_modal keywords_modal">
+      <div class="modal-content">
+        <div class="modal-header automation_report">
+          <h4 class="modal-title auto_decline_key_heading">Keywords</h4>
+          <button type="button" class="close" data-dismiss="modal"><img src="assets/images/cross_icon1.png" /></button>
+        </div>
+         <div class="modal-body">
+		   <form action="#">
+		   	 <div class="form-group">
+				<label for="keyword" class="auto_decline_key_label">Keyword</label>
+				 <select id="decline-keywords" class="auto_decline_placeholder" multiple placeholder="Type a keyword and press ENTER Key" data-role="tagsinput">
+                  </select>
+			  </div>
+
+			  <div class="form-group decline-country-wrapper">
+				<label for="keyword" class="auto_decline_country_key_label">Countries</label>
+				 <select id="decline-countries" class="auto_decline_countries_placeholder" multiple placeholder="Type a country name and press ENTER Key" data-role="tagsinput">
+                  </select>
+			  </div>
+
+			 <div class="row send_message_time mt-4">
+			    <div class="col-7 p-0 mt-1"><h5 class="auto_decline_key_label_2">Intervals</h5></div>
+			    <div class="col-3"> <input type="number" id="auto_decline_interval" type="Number" min="1" value="1" name="auto_decline_interval" class="form-control"></div>
+			    <div class="col-2 mt-2 p-0"><h6 class="auto_decline_key_label_h6">Minute(s)</h6></div>
+			 </div>
+		   <button type="button" id="save-decline-keywords" class=" btn btn-primary btn-block update mt-3 auto_decline_save_btn">Save</button>
+		  </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------------------keywords end here--------------->
+  <!------------------chatsilo modal start here--------------->
+  <div class="modal" id="chatsilo_modal" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog tag_members_modal keywords_modal">
+      <div class="modal-content">
+        <div class="modal-header automation_report">
+          <h4 class="modal-title">Chatsilo</h4>
+           <button type="button" class="close" data-dismiss="modal"><img src="assets/images/cross_icon1.png" /></button>
+        </div>
+         <div class="modal-body">
+		   <form action="#">
+
+		   	 <!--  <ul class="all-tags-list" >
+              </ul> -->
+
+              <div class="all-tags-list">
+			  <!--  	<div class="custom-control custom-checkbox chatsilo_support_community mt-2">
+				    <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+				    <label class="custom-control-label" for="customCheck">Chatsilo support community</label>
+				</div>
+				<div class="custom-control custom-checkbox groupleads_support_community mt-2">
+				    <input type="checkbox" class="custom-control-input" id="customCheck1" name="example1">
+				    <label class="custom-control-label" for="customCheck1">Group Leads support community</label>
+				</div> -->
+				</div>
+		   <button type="button" id="save-chatsilo-tags" class="btn btn-primary btn-block update save_btn">Save</button>
+		  </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------------------chatsilo modal end here--------------->
+
+  <!------------------send message settings modal starts here--------------->
+  <div class="modal" id="send_message_modal" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog tag_members_modal keywords_modal">
+      <div class="modal-content">
+      <div class="modal-header automation_report">
+          <h4 class="modal-title message_text">Message text</h4>
+          <button type="button" class="close" data-dismiss="modal"><img src="assets/images/cross_icon1.png" /></button>
+        </div>
+         <div class="modal-body">
+		   <form id="message-only-form">
+		   	<div class="form-group">
+		   		<label for="message" class="message_label">Message</label>
+				<textarea class="form-control" rows="5" name="message_only_one" id="message_only_one"  placeholder="Hey [first_name]          
+
+We've received your request to join [group_name]."></textarea>
+            </div>		  
+		   <button id="save-message-only-form" type="button" class="btn btn-primary btn-block update mt-3 message_save ">Save</button>
+		  </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------------------send message settings modal ends here---------------->
+
+   <!------------------Verify credentials modal starts here--------------->
+  <div class="modal" id="verify_credentials_modal" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog tag_members_modal keywords_modal verify_credentials">
+      <div class="modal-content">
+        <div class="modal-body">
+        <div class="row mt-4">
+	        <div class="col-12 text-center">
+	        	<img src="assets/images/Successful 1.png"/>
+	        	<h6 class="mt-3">Credentials verified and updated</h6>
+	        </div>
+	        <button type="button" class="btn btn-primary btn-block update mt-3 continue_btn" data-toggle="modal" data-target="#verify_credentials_modal">Continue</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------------------Verify credentials modal ends here---------------->
+
+   <!------------------Verify credentials modal starts here--------------->
+  <div class="modal" id="confirm_delete_group" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog tag_members_modal keywords_modal">
+      <div class="modal-content">
+        <div class="modal-body">
+        	<h6 class="message_delete_h6">Are you sure you want to delete this group</h6>
+        <div class="row mt-4">
+	      <!--   <div class="col-12 text-center">
+	        	<img src="assets/images/Successful 1.png"/>
+	        	<h6 class="mt-3">Credentials verified and updated</h6>
+	        </div> -->
+	        <button type="button" class="btn btn-primary btn-block update mt-3 confirm-group-delete">Yes</button>
+
+	        <button data-dismiss="modal" type="button" class="btn btn-primary btn-block update mt-3 no-confirm-group-delete">No</button>
+
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+     <!------------------Decline Group confirmation--------------->
+	<div class="modal" id="confirm_auto_decline" data-keyboard="false" data-backdrop="static">
+		<div class="modal-dialog tag_members_modal keywords_modal">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="row">
+						 <div class="col-2"><img src="assets/images/icon-red.png"></div>
+						 <div class="col-10 p-0" ><h6 class="message_delete_h6">New members that don't meet the criteria will be automatically declined.</h6></div>
+					</div>
+				    <div class="row">
+				    	<div class="col-6">
+		    		       <button data-group-id="0" type="button" class="btn btn-primary btn-block update mt-3 confirm-auto-decline">Yes, I Agree</button>
+				    	</div>
+
+				    	<div class="col-6">
+				      		<button  data-dismiss="modal" type="button" class="btn btn-primary btn-block update mt-3 no-confirm-auto-decline">Cancel</button>
+				    	</div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+  <!------------------Verify credentials modal ends here---------------->
+
+
+  <!------------------Error_credentials_modal credentials modal starts here--------------->
+  <div class="modal" id="Error_credentials_modal" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog tag_members_modal keywords_modal error_credentials">
+      <div class="modal-content">
+        <div class="modal-body">
+        <div class="row mt-4">
+	        <div class="col-12 text-center">
+	        	<img src="assets/images/Failed 1.png"/>
+	        	<h6 class="mt-2">Credentials verification failed</h6>
+	        </div>
+	        <button type="button" class="retry-credentials btn btn-primary btn-block update mt-3 continue_btn mt-4 pt-4">Retry</button>
+	        <button type="button" data-dismiss="modal" class="btn btn-primary btn-block update mt-3 continue_btn">Continue</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------------------Error_credentials_modal credentials modal ends here---------------->
+ 
+	<script src="assets/lib/jquery.min.js"></script>
+	<script src="assets/lib/popper.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>     	
+    <script src="assets/lib/jquery.validate.js"></script>
+    <script src="config.js"></script>   
+    <script src="assets/lib/moment.min.js"></script>           
+    <script src="assets/lib/simplebar.js"></script>   
+
+	<script src="assets/lib/bootstrap-tagsinput.js"></script>  
+	<script src="assets/js/toastr.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>    
+    <script src="assets/lib/placeholder-animation.js"></script>
+    <script src="assets/js/script.js"></script>		
+</body>
+</html> 

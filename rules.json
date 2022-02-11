@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "*://*.facebook.com/groups*_rdc=1&_rdr*", "resourceTypes": ["main_frame"] }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {"urlFilter": "*://*.facebook.com/messages*_rdc=1&_rdr*", "resourceTypes": ["main_frame"] }
+  }
+]

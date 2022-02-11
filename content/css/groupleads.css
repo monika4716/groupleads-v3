@@ -1,0 +1,271 @@
+#groupleads_model a{	
+    float: right;
+    color: red;
+	margin-right:-35px;
+}
+#groupleads_model img{
+	float:left;
+	width:100%;	
+}
+#groupleads_model{
+	position: fixed;
+    top: calc( 50% - 165px );
+    text-align: center;
+    left: calc( 50% - 170px );
+    padding: 5px 40px 40px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #fff;
+	width: 200px;
+}
+
+#overlay-gr {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 9999;
+}
+
+#member_requests_pagelet button.groupleads_custom_approve_all,button.approve_one,div[aria-label="Group Content"] button.groupleads_custom_approve_all,div[aria-label="Group content"] button.groupleads_custom_approve_all{
+	font-weight: 600;
+    background: #D43E34;
+    color: white;
+}
+.custom_filter_design{
+	background:red !important;
+	color:white !important;
+}
+
+.gl-new-layout button.groupleads_custom_approve_all,.gl-new-layout button.approve_one, .gl-new-layout button.groupleads_custom_decline_all,.gl-new-layout button.decline_one{
+	padding: 8px 15px;
+  border: navajowhite;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.groupleads-menu-item:hover{
+	background: #1B3280;
+}
+.groupleads-menu-item a:hover{
+	color: #FFFFFF !important;
+}
+
+.new_fb{
+  padding: 10px 18px !important;
+  list-style: none !important;
+}
+
+.new_fb img{
+  max-height: 20px !important;
+  max-width: 20px !important;
+  margin-right: 10px !important;
+  float: left !important;
+}
+
+.new_fb span{
+  line-height: 18px !important;
+  float: left !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  color: #1c1e21 !important;
+}
+
+.groupleads-menu-item.new_fb.__MenuItem{
+    height:20px !important;
+    width:100% !important;
+}
+
+.gl-message-only.fb-new{
+    margin-left: -154px;
+    margin-right: 53px;
+    margin-top: 4px;
+    background-color: #3C61AD !important;
+    border: unset;
+    padding: 8px;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+    border-radius: 5px;
+    cursor:pointer !important;
+
+    position: absolute;
+    top: 45px;
+    right: 115px;
+    width: 180px;
+}
+
+.gl-processed{
+  position: relative !important;
+}
+.gl-message-only.old-lay-out{
+    border: unset;
+    padding: 8px;
+    color: white;
+    cursor:pointer !important;
+    padding: 2px;
+    position: absolute;
+    top: 45px;
+    right: 115px;
+    width: 180px;
+    background-color: #3C61AD !important;
+    cursor:pointer !important;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 4px;
+}
+
+.approve_one{
+ margin-bottom: 35px !important;
+}
+
+
+
+.__fb-dark-mode .groupleads-menu-item.new_fb.__MenuItem span{
+  color: white !important;
+}
+
+
+/*by richa*/
+
+.gr-card-body .progress{
+  position:relative;
+  width:100%;
+  top:25px;
+  left:0px;
+}
+.gr-card-body h4{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #262626;
+  margin-top:30px;
+}
+.gr-card-body .progress1{
+  position:absolute;
+  width:1%;
+  background:#3C61AD;
+  height:10px;
+  border-top-left-radius:4px;
+  border-bottom-left-radius:4px;
+}
+.gr-card-body .progress2{
+  position:absolute;
+  width:100%;
+  background:#C4C4C4;
+  height:10px;
+  left:0px;
+  border-top-right-radius:4px;
+  border-bottom-right-radius:4px;
+}
+.gr-card-body .close{
+  top: 44px;
+  position: absolute;
+  right: 16px;
+  margin-right: 0;
+
+}
+
+#groupleads_model{
+  height:auto !important;
+  padding: 5px 11px 40px;
+  width: 300px;
+  border-radius:10px;
+  padding-bottom:70px !important
+}
+#groupleads_model img{
+   /*border-bottom: 1px solid grey; */
+  padding-bottom: 6px;
+  width:200px !important;
+  border-radius: 8px;
+}
+#groupleads_model a {
+  margin-right:10px;
+  color: #C4C4C4 !important;
+  margin-top: 25px;
+  font-weight: 200;
+  font-size: 20px;
+}
+.bar-line{
+  margin-top: 24px;
+}
+.gr-card-body .row.level-1 {
+  width: 100%;
+  float: left;
+}
+.gr-card-body .row.level-2 {
+  width: 50%;
+  float: left;
+}
+
+.gr-tab{
+  display: none;
+}
+
+.gr-tab .row.progress1{
+  z-index: 99;
+}
+
+
+
+#groupleads_model .complete-image{
+  width: 52px !important;
+  margin-left: 130px; 
+
+}
+
+#groupleads_model .h2-text-color{
+  color: #3C61AD;
+    font-size: 33px;
+}
+#groupleads_model .gr-contents{
+  margin-top:10px;
+}
+#groupleads_model .gr-tab.tagging-wait-tab.custom-body-2.row.level-1 .level-2 {
+    width: 100%;
+}
+#groupleads_model .gr-tab.complete-tab.custom-body-2.row.level-1 h2{
+    position: absolute;
+    top: 194px;
+    left: 130px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #262626;
+}
+
+
+button.approve_one, button.groupleads_custom_approve_all{
+  cursor: pointer;
+}
+
+.gl-approve-on-selection{
+  position: fixed !important;
+    top: 172px !important;
+    left: auto !important;
+    right: 0px !important;
+    width: 93px !important;
+    text-align: center !important;
+    border-radius: 5px !important;
+    padding: 6px !important;
+    background: #D43E34;
+    color: white;
+    cursor: pointer;
+}
+
+.gl-select-approve{
+    position: absolute;
+    top: 14px;
+    left: -18px;
+    height: 16px;
+    width: 16px;
+}
+.decline_one,.groupleads_custom_decline_all{
+  cursor: pointer;
+}
