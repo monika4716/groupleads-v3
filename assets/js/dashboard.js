@@ -1365,6 +1365,11 @@ $(document).ready(function() {
     });
 });
 
+
+setInterval(()=>{
+    chrome.runtime.sendMessage({"type":"backgroundActive","from":"popup"});
+})
+
 function updateTagsInGroupleads() {
     $checkedTags = [];
     $('.all-tags-list .one-tag-li').each(function(index) {

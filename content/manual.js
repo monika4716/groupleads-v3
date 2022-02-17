@@ -23,7 +23,7 @@ var CommentAllyInterval = false;
 var loadRequestLimit = 50;
 var isLoadFiftyCase = false;
 var totalPendingAllRequests = 0;
-var limitToTagInOnePost = 20;
+var limitToTagInOnePost = 25;
 // Add native 'click' and 'change' events to be triggered using jQuery
 jQuery.fn.extend({
     'mclick': function() {
@@ -427,9 +427,11 @@ function initialize_events() {
         var groupAllMembers = [];
         var groupName = getGroupName();
         $(RightSiteBarSelector + " " + MemberRequestSelector).each(function(index) {
-            temp = getMemberProfileId(this)
-            let member = getMemmberRequestDetails(this)
-            groupAllMembers.push(member);
+            if($(this).attr('data-testid')!= ''){
+                temp = getMemberProfileId(this)
+                let member = getMemmberRequestDetails(this)
+                groupAllMembers.push(member);
+            }
         });
         //console.log('test 5');
         //console.log(groupAllMembers);
@@ -1608,6 +1610,7 @@ function sendWelcomeMessageOneByOneToAll($membersToSendMessage, startIndex) {
                 totalRequestsThreadsCounterWelcome++;
                 $('.gr-msg-counter').html(totalRequestsThreadsCounterWelcome)
                 $('.gr-msg-total').html($membersToSendMessage.length)
+                $("#groupleads_model .gr-msg").text('');
                 showHideTab('sending-message-counter-tab');
                 //$("#groupleads_model  span.gr-card-body").html('Sending message <br> Counter: '+totalRequestsThreadsCounterWelcome+'<br>Total: '+$membersToSendMessage.length);
                 if (totalRequestsThreadsCounterWelcome == $membersToSendMessage.length) {
@@ -1652,7 +1655,8 @@ function sendWelcomeMessageOneByOneToAll($membersToSendMessage, startIndex) {
                 callAgainFlag = false;
                 setTimeout(() => {
                     if ($membersToSendMessage.length != 0) {
-                        sendWelcomeMessageOneByOneToAll($membersToSendMessage, totalRequestsThreadsCounterWelcome - 1);
+                        //sendWelcomeMessageOneByOneToAll($membersToSendMessage, totalRequestsThreadsCounterWelcome - 1);
+                        sendWelcomeMessageOneByOneToAll($membersToSendMessage, 1);
                     }
                 }, (processThreadDealy + parseInt(currentGroupDetails[0].welcome_start_time)) * 60000);
                 setTimeout(() => {

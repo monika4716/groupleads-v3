@@ -4,6 +4,8 @@ chrome.windows.getAll({populate : true}, function (list) {
 
     window_height = list[0].height;
     window_width = list[0].width;
+    console.log(window_height);
+    console.log(window_width);
 });
 var optionPageTabId = 0;
 
@@ -108,6 +110,8 @@ chrome.runtime.onMessage.addListener(function(message, sender, send_response) {
         if(optionPageTabId != 0){
             chrome.tabs.remove(optionPageTabId);
         }
+    }else if(message.type == "backgroundActive" && message.from == "popup"){
+        console.log('backgroundActive');
     }
 })
 
@@ -1795,21 +1799,19 @@ function OpenOptionPage(){
                         url: chrome.runtime.getURL("option.html"),
                         focused: false,
                         type: "popup",
-                        top:Math.floor(window_height-10),
-                        left:Math.floor(window_width-10),
-                        height:10,
-                        width:10
+                        // top:Math.floor(window_height-10),
+                        // left:Math.floor(window_width-10),
+                        // height:10,
+                        // width:10
 
-                        //testing
-                        /*top: Math.floor(window_height / 4 * 3),
-                        left: Math.floor(window_width / 4 * 3),
-                        height: Math.floor(window_height / 4),
-                        width: Math.floor(window_width / 4)*/
+                        top:Math.floor(window_height/4*3),
+                        left:Math.floor(window_width/4*3), 
+                        height:Math.floor(window_height/4), 
+                        width:Math.floor(window_width/4)
                     }, function(tabs) {
 
                         optionPageTabId = tabs.tabs[0].id;
                         console.log(optionPageTabId);
-                       //console.log(tabs);
                     });
                 }
             });

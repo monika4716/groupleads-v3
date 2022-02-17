@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Group Leads v3",
-    "short_name": "Group Leads v3",
-    "version": "3.9.8",
+    "name": "Group Leads",
+    "short_name": "Group Leads",
+    "version": "3.9.4",
     "description": "Group leads helps you convert new facebook group members into leads in your favorite email marketing software.",
     "background": {
         "service_worker": "background/bg-loader.js"
@@ -25,7 +25,6 @@
         }]
     },
     "content_security_policy": {
-        
         "extension_pages": "script-src 'self'; object-src 'self'"
     },
     "oauth2": {
