@@ -1,11 +1,8 @@
 var window_height = 0;
 var window_width = 0;
 chrome.windows.getAll({populate : true}, function (list) {
-
     window_height = list[0].height;
     window_width = list[0].width;
-    console.log(window_height);
-    console.log(window_width);
 });
 var optionPageTabId = 0;
 
@@ -66,14 +63,14 @@ function requestHandler(details) {
 // Listen for message to reload current page
 chrome.runtime.onMessage.addListener(function(message, sender, send_response) {
     if (message.reloadFbPage == 'yes') {
-        console.log('message 1');
+        //console.log('message 1');
         custom_data = message;
         setTimeout(()=>{
             clearAutomaticIntervals();
         },2000);
         getCurrentTab().then(function(tab){
-            console.log(tab.id);
-            console.log(tab.url);
+            //console.log(tab.id);
+            //console.log(tab.url);
             chrome.tabs.update(tab.id, {
                 url: tab.url
             });
@@ -81,7 +78,7 @@ chrome.runtime.onMessage.addListener(function(message, sender, send_response) {
     } else if (message.auto_approve_settings_updated) {
         console.log('message 2');
 
-        console.log('automation call from popup');
+        //console.log('automation call from popup');
        setTimeout(()=>{
             clearAutomaticIntervals();
         },2000);
@@ -152,7 +149,7 @@ chrome.runtime.onConnect.addListener(function(port) {
             })
         }
         if (message.type == 'verifyGoogleSheet') {
-            console.log('verifyGoogleSheet');
+            //console.log('verifyGoogleSheet');
             google_sheet_not_valid = 'Google sheet is not valid'; // selected_lang_locale.background_script_message.google_sheet_not_valid
             var message = message;
             chrome.identity.getAuthToken({
@@ -252,7 +249,7 @@ chrome.runtime.onConnect.addListener(function(port) {
                                         } else {
                                             console.log('elssssse');
                                             getCurrentTab().then(function(tab){
-                                                chrome.tabs.sendMessage(tabs.id, {
+                                                chrome.tabs.sendMessage(tab.id, {
                                                     type: 'declineOne',
                                                     from: 'background',
                                                     memberId: message.memberId,
@@ -844,10 +841,15 @@ function getNumericFbIdOne(currentIndex, workingTabId) {
 }
 
 function saveMemberToDatabase($currentGroupSettings, $googleSheetMembers) {
+
     var $groupId = $currentGroupSettings.groupId;
     var $groupFbId = $currentGroupSettings.groupFbId;
     var $chatsilo_tags_status = $currentGroupSettings.chatsilo_tag_status;
     var $chatsilo_tagIds = [$currentGroupSettings.chatsilo_tag_ids];
+
+
+    console.log($chatsilo_tagIds);
+    
     if ($currentGroupSettings.chatsilo_tag_ids.indexOf(',') > -1) {
         $chatsilo_tagIds = $currentGroupSettings.chatsilo_tag_ids.split(',');
     }
@@ -879,6 +881,7 @@ function saveMemberToDatabase($currentGroupSettings, $googleSheetMembers) {
                 $postData = {
                     all_leads: allMembersArray
                 };
+                console.log(JSON.stringify($chatsilo_tagIds));
                 if ($chatsilo_tags_status == 1 && $currentGroupSettings.isNewLayout && $chatsilo_tagIds != 0 && currentLoggedInFBId) {
                     $postData = {
                         all_leads: allMembersArray,
@@ -887,6 +890,7 @@ function saveMemberToDatabase($currentGroupSettings, $googleSheetMembers) {
                         fb_id: currentLoggedInFBId
                     };
                 }
+                console.log(JSON.stringify($postData));
                 if (allMembersArray.length > 0) {
                     console.log(jwtToken);
                     fetch(apiBaseUrl + "save-all-leads", {
@@ -897,6 +901,7 @@ function saveMemberToDatabase($currentGroupSettings, $googleSheetMembers) {
                             "Authorization": "Bearer " + jwtToken
                         }
                     }).then(response => response.json()).then(data => {
+                        console.log(data);
                         if (data.status == 200) {
                             chrome.runtime.sendMessage(chatsiloExtensionId, {
                                 triggerTaggingFromGL: true
@@ -935,6 +940,9 @@ var arrayOfTabIdsWithMessageText = [];
 function sendWelcomeMessage(threadId, mesg) {
     threadId = threadId.replace('/', '');
     var mesg1 = mesg;
+
+    console.log(threadId)
+    console.log(mesg1)
     if (/[a-zA-Z]/.test(threadId)) { /// having alphabets id
         fetch('https://m.facebook.com/' + threadId).then(response => response.text()).then(data => {
             var str = data;
@@ -964,7 +972,11 @@ function sendWelcomeMessage(threadId, mesg) {
         });
     } else {
         console.log('else');
+
+//https://m.facebook.com/messages/compose/?ids=100047098938453
+
         var sendWelcomeMeesageUrl = 'https://m.facebook.com/messages/compose/?ids=' + threadId;
+        console.log(sendWelcomeMeesageUrl);
         chrome.windows.create({
             url: sendWelcomeMeesageUrl,
             focused: false,
@@ -1510,12 +1522,17 @@ function reloadAllTabsOnStartUp() {
 }
 
 function currentFBLogin() {
+    //console.log('currentFBLogin');
     getCurrentUserFbId().then(function(fbId) {
+        //console.log(fbId);
         currentLoggedInFBId = fbId;
         chrome.storage.local.get(["user","jwtToken"], function(result) {
             //console.log(result.user);
             jwtToken = result.jwtToken;
             if (typeof result.user.email != "undefined") {
+                //console.log('get-all-tag-for-group-leads');
+                //console.log(currentLoggedInFBId);
+                //console.log(result.user.email);
                 fetch(apiBaseUrl + "get-all-tag-for-group-leads", {
                     method: "POST",
                     body: JSON.stringify({
@@ -1527,6 +1544,7 @@ function currentFBLogin() {
                         'Authorization': "Bearer " + jwtToken
                     }
                 }).then(response => response.json()).then(response => {
+                    //console.log(response);
                     if (response.status == 200) {
                         chrome.runtime.sendMessage({
                             action: 'show_tags_div',
@@ -1550,13 +1568,20 @@ function currentFBLogin() {
 * Get current facebook user id
 */
 async function getCurrentUserFbId() {
+    //console.log('getCurrentUserFbId');
     return new Promise(function(resolve, reject) {
-
         fetch("https://www.facebook.com/me",{method: 'GET'}).then(function(response){
-
+            //console.log(response);
             if(response.status == 200){
-
+                //console.log(response.url);
+                //console.log(new URL(response.url));
                 let fbID = (new URL(response.url)).searchParams.get('id');
+                if(fbID == null){
+                    url = new URL(response.url);
+                    fbID = url.pathname;
+                    fbID = fbID.replace("/", "");
+                    fbID = fbID.replace("/", "");
+                }
                 resolve(fbID);
             }else{
                 reject(false);
@@ -1792,22 +1817,22 @@ function OpenOptionPage(){
                         return false;
                     }
                 })
-                
+                console.log(windowFound.length);
                 if(windowFound.length == 0){
                     console.log('window open');
                     chrome.windows.create({
                         url: chrome.runtime.getURL("option.html"),
                         focused: false,
                         type: "popup",
-                        // top:Math.floor(window_height-10),
-                        // left:Math.floor(window_width-10),
-                        // height:10,
-                        // width:10
+                        top:Math.floor(window_height-10),
+                        left:Math.floor(window_width-10),
+                        height:10,
+                        width:10
 
-                        top:Math.floor(window_height/4*3),
-                        left:Math.floor(window_width/4*3), 
-                        height:Math.floor(window_height/4), 
-                        width:Math.floor(window_width/4)
+                        // top:Math.floor(window_height/4*3),
+                        // left:Math.floor(window_width/4*3), 
+                        // height:Math.floor(window_height/4), 
+                        // width:Math.floor(window_width/4)
                     }, function(tabs) {
 
                         optionPageTabId = tabs.tabs[0].id;

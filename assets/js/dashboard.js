@@ -603,6 +603,7 @@ $(document).ready(function() {
                 xhr.setRequestHeader('Authorization', "Bearer " + jwtToken);
             }
         }).done(function(response) {
+            console.log(response)
             loader(false)
             $('.tab').hide();
             $('#groupleads-tabs').show();
@@ -644,6 +645,7 @@ $(document).ready(function() {
             //////chatsilo tag settings///////////////////
             if (response.data.chatsilo_tag_ids != 0) {
                 var chatsilo_tag_ids = [response.data.chatsilo_tag_ids];
+                console.log(chatsilo_tag_ids);
                 if (response.data.chatsilo_tag_ids.indexOf(',') > -1) {
                     chatsilo_tag_ids = response.data.chatsilo_tag_ids.split(',');
                 }

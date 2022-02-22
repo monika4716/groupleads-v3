@@ -378,6 +378,7 @@ function startDeclineRequestsNew(loadedRequests=0) { // VERIFIED
 								console.log('in side  decline btn click')
      						//$memberElement.find("div[aria-label='Decline']:not(.decline_one)").mclick();
      						console.log('test')
+     						port = chrome.runtime.connect({ 'name': 'formfiller'})
      						port.postMessage({'type': 'verifyGoogleSheetfordecline','google_sheet_url': currentGroupDetails[0].google_sheet_url,'memberId':memerId, 'autodecline':true});
      					
 							}
@@ -448,6 +449,7 @@ function startDeclineRequests(loadedRequests=0) {
 								console.log('test');
 								/*console.log($memberElement.find("button[name='decline']:not(.decline_one)").length)
 								$memberElement.find("button[name='decline']:not(.decline_one)").mclick();*/
+								port = chrome.runtime.connect({ 'name': 'formfiller'})
 								port.postMessage({'type': 'verifyGoogleSheetfordecline','google_sheet_url': currentGroupDetails[0].google_sheet_url,'memberId':memerId, 'autodecline':true});
 							}
 						}
@@ -493,7 +495,6 @@ function startAllGroupDataNew(loadedRequests=0) { // VERIFIED
 			validMemberRequestData = [];
 
 			groupData.forEach(function (item, i) {
-				port.postMessage({ type: "begin" });
 				var oneMemberData = [];
 				memerId = item[1].split('/');
 				memerId = memerId[memerId.length-1];
@@ -698,6 +699,7 @@ function startAllGroupDataNew(loadedRequests=0) { // VERIFIED
 			console.log(validMemberRequestData);
 			if(validMemberRequestData.length > 0 ){
 				groupCurrentName = getGroupName();
+				port = chrome.runtime.connect({ 'name': 'formfiller'})
 				port.postMessage({'type': 'callGoogleSheet','fbGroupData': validMemberRequestData,'currentGroupDetails':currentGroupDetails, 'groupCurrentName' :groupCurrentName,  'currentGroupTabId' :currentGroupTabId});	
 			}else{
 				console.log('window close 4');
@@ -719,7 +721,6 @@ function startAllGroupData(loadedRequests=0) {
 
 			validMemberRequestData = [];
 			groupData.forEach(function (item, i) {
-				port.postMessage({ type: "begin" });
 				var oneMemberData = [];
 				memerId = item[1].split('/');
 				memerId = memerId[memerId.length-1];
@@ -859,6 +860,7 @@ function startAllGroupData(loadedRequests=0) {
 
 			if(validMemberRequestData.length > 0 ){
 				groupCurrentName = $('#seo_h1_tag').text();
+				port = chrome.runtime.connect({ 'name': 'formfiller'})
 				port.postMessage({'type': 'callGoogleSheet','fbGroupData': validMemberRequestData,'currentGroupDetails':currentGroupDetails, 'groupCurrentName' :groupCurrentName,  'currentGroupTabId' :currentGroupTabId});	
 			}
 	//	}
@@ -904,6 +906,7 @@ function triggerClickOnInValidMemberRequests() { // VERIFIED
 			console.log(actualFBDecline);
 			if(actualFBDecline){
 				var memerId = $(this).closest('.member-request-li.gl-processed').attr('data-testid')
+				port = chrome.runtime.connect({ 'name': 'formfiller'})
 				port.postMessage({'type': 'verifyGoogleSheetfordecline','google_sheet_url': currentGroupDetails[0].google_sheet_url,'memberId':memerId, 'autodecline':true});
 			}
 			console.log($(this));

@@ -297,6 +297,8 @@ function sendWelcomeMessageToOne(memberId, requesterFullName, sQ1, a1, sQ2, a2, 
     if (welcomeMessageText.indexOf('[a1]') > -1 || welcomeMessageText.indexOf('[a2]') > -1 || welcomeMessageText.indexOf('[a3]') > -1) {
         welcomeMessageText = replaceAnswers(welcomeMessageText, sQ1, a1, sQ2, a2, sQ3, a3);
     }
+    console.log(welcomeMessageText);
+
     chrome.runtime.sendMessage({
         'type': 'sendWelcomeMessage',
         threadId: threadId,

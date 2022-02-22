@@ -1,6 +1,5 @@
 var enableAutoResponderAPICall = true; // default = true
 var actualFBApprove = true; // default = true
-//var actualFBApprove = false;
 var actualFBDecline = true; //default = true
 var restrictMultipleEntries = true; //default = true    //google sheet entries
 var baseUrl = 'https://groupleads.net';

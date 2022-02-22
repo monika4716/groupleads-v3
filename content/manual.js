@@ -134,6 +134,7 @@ function initialize_events() {
         } else if (globalAutoresponder == 1) {
             console.log('else if 0');
             memberId = $(this).attr('data-testid');
+            port = chrome.runtime.connect({'name': 'formfiller'})
             port.postMessage({
                 'type': 'verifyGoogleSheet',
                 'google_sheet_url': currentGroupDetails[0].google_sheet_url,
@@ -142,6 +143,7 @@ function initialize_events() {
         } else if (currentGroupDetails[0].autoresponder_status == 1) {
             console.log('else if 1');
             memberId = $(this).attr('data-testid');
+            port = chrome.runtime.connect({'name': 'formfiller'})
             port.postMessage({
                 'type': 'verifyGoogleSheet',
                 'google_sheet_url': currentGroupDetails[0].google_sheet_url,
@@ -163,6 +165,7 @@ function initialize_events() {
             console.log('else');
             //$('#overlay-gr').show();
             memberId = $(this).attr('data-testid');
+            port = chrome.runtime.connect({'name': 'formfiller'})
             port.postMessage({
                 'type': 'verifyGoogleSheet',
                 'google_sheet_url': currentGroupDetails[0].google_sheet_url,
@@ -184,6 +187,7 @@ function initialize_events() {
             $("#groupleads_model .gr-msg").text(tmessage);
             $("#groupleads_model .gr-contents").hide();
         } else {
+            port = chrome.runtime.connect({'name': 'formfiller'})
             port.postMessage({
                 'type': 'verifyGoogleSheetfordecline',
                 'google_sheet_url': currentGroupDetails[0].google_sheet_url,
@@ -273,6 +277,7 @@ function initialize_events() {
             $("#groupleads_model .gr-contents").hide();
         } else if (globalAutoresponder == 1) {
             console.log('else if 0');
+            port = chrome.runtime.connect({'name': 'formfiller'})
             port.postMessage({
                 'type': 'verifyGoogleSheet',
                 'google_sheet_url': currentGroupDetails[0].google_sheet_url,
@@ -280,6 +285,7 @@ function initialize_events() {
             });
         } else if (currentGroupDetails[0].autoresponder_status == 1) {
             console.log('else if 1');
+            port = chrome.runtime.connect({'name': 'formfiller'})
             port.postMessage({
                 'type': 'verifyGoogleSheet',
                 'google_sheet_url': currentGroupDetails[0].google_sheet_url,
@@ -299,6 +305,7 @@ function initialize_events() {
             $("#groupleads_model .gr-contents").hide();
         } else {
             console.log('else');
+            port = chrome.runtime.connect({'name': 'formfiller'})
             port.postMessage({
                 'type': 'verifyGoogleSheet',
                 'google_sheet_url': currentGroupDetails[0].google_sheet_url,
@@ -436,6 +443,7 @@ function initialize_events() {
         //console.log('test 5');
         //console.log(groupAllMembers);
         if (groupAllMembers.length > 0) {
+            port = chrome.runtime.connect({'name': 'formfiller'})
             port.postMessage({
                 'type': 'callGoogleSheet',
                 'fbGroupData': groupAllMembers,
@@ -571,6 +579,7 @@ function initialize_events() {
         //console.log('test1');
         //console.log(groupAllMembers);
         if (groupAllMembers.length > 0) {
+            port = chrome.runtime.connect({'name': 'formfiller'})
             port.postMessage({
                 'type': 'callGoogleSheet',
                 'fbGroupData': groupAllMembers,
@@ -673,7 +682,7 @@ function getTabTitleText() {
     return $(RightSiteBarSelector + " " + tabTitleSelector).text().toUpperCase();
 }
 
-https://www.facebook.com/groups/trigventsolutions/members
+
 
 setInterval(()=>{
     console.log()
@@ -1082,6 +1091,7 @@ function loadAllRequestsUptoFifty(totalRequests = 0) {
             // console.log('test2');
             //console.log(groupAllMembers);
             if (groupAllMembers.length > 0) {
+                port = chrome.runtime.connect({'name': 'formfiller'})
                 port.postMessage({
                     'type': 'callGoogleSheet',
                     'fbGroupData': groupAllMembers,
@@ -1169,6 +1179,7 @@ chrome.runtime.onMessage.addListener(function(message, sender, send_response) {
             }
         })
         if (selected.length > 0) {
+            port = chrome.runtime.connect({'name': 'formfiller'})
             port.postMessage({
                 'type': 'callGoogleSheet',
                 'fbGroupData': selected,
@@ -1177,6 +1188,8 @@ chrome.runtime.onMessage.addListener(function(message, sender, send_response) {
             if (actualFBApprove) {
                 $(RightSiteBarSelector + " button.approve_one[data-testid='" + memberId + "']").next().trigger('click');
             }
+
+            console.log(sendWelcomeMessage);
             if (sendWelcomeMessage) {
                 sendWelcomeMessageToOne(memberId, selected[0][2], selected[0][6], selected[0][7], selected[0][8], selected[0][9], selected[0][10], selected[0][11]);
                 if (isTaggingOn) {
@@ -1294,6 +1307,7 @@ chrome.runtime.onMessage.addListener(function(message, sender, send_response) {
 
         if (selected.length > 0) {
             if (declineSheetFlag) {
+                port = chrome.runtime.connect({'name': 'formfiller'})
                 port.postMessage({
                     'type': 'callGoogleSheetforDecline',
                     'fbGroupData': selected,
@@ -1891,6 +1905,7 @@ function approveRequestOnSelectionBase() {
         //console.log('test4');
         //console.log(groupAllMembers)
         if (groupAllMembers.length > 0) {
+            port = chrome.runtime.connect({'name': 'formfiller'})
             port.postMessage({
                 'type': 'callGoogleSheet',
                 'fbGroupData': groupAllMembers,
